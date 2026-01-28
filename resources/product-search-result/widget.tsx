@@ -10,14 +10,16 @@ import { queryClient } from "./constants";
 import type { ProductSearchResultProps } from "./types";
 import { propSchema } from "./types";
 
+const server = process.env.SERVER_URL;
+
 export const widgetMetadata: WidgetMetadata = {
   description:
     "Display product search results with filtering, state management, and tool interactions",
   props: propSchema,
   metadata: {
     csp: {
-      connectDomains: process.env.MCP_URL ? [process.env.MCP_URL] : [],
-      resourceDomains: process.env.MCP_URL ? [process.env.MCP_URL] : [],
+      connectDomains: server ? [server] : [],
+      resourceDomains: server ? [server] : [],
     },
   },
 };
