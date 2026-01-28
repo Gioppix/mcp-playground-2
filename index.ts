@@ -1,8 +1,8 @@
 import { MCPServer, object } from "mcp-use/server";
 
 const server = new MCPServer({
-  name: "dioboia",
-  title: "dioboia", // display name
+  name: "playground-2",
+  title: "playground-2", // display name
   version: "1.0.0",
   description: "MCP server with OpenAI Apps SDK integration",
   baseUrl: process.env.MCP_URL || "http://localhost:3000", // Full base URL (e.g., https://myserver.com)
@@ -94,7 +94,7 @@ server.tool(
         "MCP protocol compliance",
       ],
     });
-  }
+  },
 );
 
 server.listen().then(() => {
