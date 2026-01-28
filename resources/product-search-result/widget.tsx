@@ -16,8 +16,8 @@ export const widgetMetadata: WidgetMetadata = {
   props: propSchema,
   metadata: {
     csp: {
-      connectDomains: [],
-      resourceDomains: [],
+      connectDomains: process.env.MCP_URL ? [process.env.MCP_URL] : [],
+      resourceDomains: process.env.MCP_URL ? [process.env.MCP_URL] : [],
     },
   },
 };
